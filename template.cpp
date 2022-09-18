@@ -36,6 +36,7 @@ void logger(string vars, Args&&... values) {
     cout << vars << " = ";
     string delim = "";
     (..., (cout << delim << values, delim = ", "));
+    cout << '\n';
 }
 
 // Example: https://www.codechef.com/viewsolution/54414764
@@ -83,23 +84,25 @@ signed main() {
     cin.tie(0);
     cout.tie(0);
 
-    // inp(T, int);
-    // loop(t, 0, T)
+    inp(T, int);
+    loop(t, 0, T) {
         solution();
+        cout << ln;
+    }
 
     return 0;
 }
 
 void solution() {
-    inp(N, int);
+    inp(n, int);
 
-    // vec(int) A(N);
+    // vec(int) A(n);
 
-    loop(i, 0, N) {
+    loop(i, 0, n) {
         // cin >> A[i];
     }
 
     // sort(all(A));
 
-    // cout << A << ln;
+    // cout << A;
 }
