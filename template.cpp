@@ -15,10 +15,10 @@ using namespace std;
 #define allr(name) name.rbegin(), name.rend()
 #define pb push_back
 
-#ifdef LOCAL
-#define deb(...) logger(#__VA_ARGS__, __VA_ARGS__)
-#else
+#ifdef ONLINE_JUDGE
 #define deb(...) 1
+#else
+#define deb(...) logger(#__VA_ARGS__, __VA_ARGS__)
 #endif
 
 template <typename T>
@@ -41,8 +41,7 @@ void logger(string vars, Args&&... values) {
 
 // Example: https://www.codechef.com/viewsolution/54414764
 long long const mod = 1e9+7;
-long long inverse_modulo(long long p, long long q)
-{
+long long inverse_modulo(long long p, long long q) {
     long long expo = mod - 2;
     while (expo) {
         if (expo & 1) {
@@ -84,7 +83,10 @@ signed main() {
     cin.tie(0);
     cout.tie(0);
 
-    inp(T, int);
+    int T = 1;
+
+    // cin >> T;
+
     loop(t, 0, T) {
         solution();
         cout << ln;
