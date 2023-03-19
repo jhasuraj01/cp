@@ -3,5 +3,5 @@
         "cmath": "cpp",
         "complex": "cpp"
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 4
 }

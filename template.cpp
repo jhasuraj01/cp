@@ -85,7 +85,7 @@ signed main() {
 
     int T = 1;
 
-    // cin >> T;
+    cin >> T;
 
     loop(t, 0, T) {
         solution();
