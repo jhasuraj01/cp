@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ln '\n'
+#define endl '\n'
 #define ll long long int
 #define vi vector<int>
 #define vvi vector<vi>
@@ -9,8 +9,8 @@ using namespace std;
 #define pii pair<int, int>
 #define pll pair<ll, ll>
 #define inp(var, type) type var; cin >> var
-#define loop(i,a,b) for (int i = a; i < b; ++i)
-#define vec(type) vector< type >
+#define rep(i,a,b) for (int i = a; i < b; ++i)
+#define repe(i,a,b) for (int i = a; i < b; ++i)
 #define all(name) name.begin(), name.end()
 #define allr(name) name.rbegin(), name.rend()
 #define pb push_back
@@ -79,17 +79,19 @@ long long binpow(long long a, long long b, long long m) {
 void solution();
 
 signed main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+	cin.tie(0)->sync_with_stdio(0);
     cout.tie(0);
+    cin.exceptions(cin.failbit);
+	// cout << setprecision(17) << fixed;
+    // cout << flush;
 
     int T = 1;
 
     cin >> T;
 
-    loop(t, 0, T) {
+    rep(t, 0, T) {
         solution();
-        cout << ln;
+        cout << endl;
     }
 
     return 0;
@@ -98,9 +100,9 @@ signed main() {
 void solution() {
     inp(n, int);
 
-    // vec(int) A(n);
+    // vi A(n);
 
-    loop(i, 0, n) {
+    rep(i, 0, n) {
         // cin >> A[i];
     }
 
