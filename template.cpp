@@ -10,7 +10,7 @@ using namespace std;
 #define pll pair<ll, ll>
 #define inp(var, type) type var; cin >> var
 #define rep(i,a,b) for (int i = a; i < b; ++i)
-#define repe(i,a,b) for (int i = a; i < b; ++i)
+#define repe(i,a,b) for (int i = a; i <= b; ++i)
 #define all(name) name.begin(), name.end()
 #define allr(name) name.rbegin(), name.rend()
 #define pb push_back
