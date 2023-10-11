@@ -3,7 +3,7 @@
 // Space Complexity: O(N)
 
 class RollingHash {
-private:
+    private:
     vector<long long> p_power_cache;
     long long p,m;
 
@@ -19,7 +19,7 @@ private:
 
         return p_power_cache[i];
     }
-public:
+    public:
     RollingHash(int const p = 31, int const m = 1e9+7) {
         this->p = (long long) p;
         this->m = (long long) m;
