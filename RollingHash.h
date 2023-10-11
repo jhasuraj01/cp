@@ -3,7 +3,8 @@
 // Space Complexity: O(N)
 // Example 1: RollingHash hash;
 // Example 2: RollingHash hash(31);
-// Example 3: RollingHash hash(31, 1e9+9, 'a');
+// Example 3: RollingHash hash(31, 'a');
+// Example 4: RollingHash hash(31, 'a', 1e9+9);
 
 class RollingHash {
 private:
@@ -23,7 +24,7 @@ private:
         return p_power_cache[i];
     }
 public:
-    RollingHash(int const p = 257, int const m = 1e9+7, int start_ascii = 0) {
+    RollingHash(int const p = 257, int const start_ascii = 0, int const m = 1e9+7) {
         this->p = (long long) p;
         this->m = (long long) m;
         this->start_ascii = start_ascii;
