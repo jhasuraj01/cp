@@ -1,4 +1,4 @@
-#include "tests/hash_test.cpp"
+#include "hash_test.cpp"
 
 int main() {
 
