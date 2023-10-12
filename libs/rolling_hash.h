@@ -8,7 +8,7 @@
 
 class RollingHash {
 private:
-    vector<long long> p_power_cache;
+    std::vector<long long> p_power_cache;
     long long p,m;
     int start_ascii;
 
@@ -31,7 +31,7 @@ public:
         this->p_power_cache.push_back(1);
     }
 
-    long long compute(string const& s) {
+    long long compute(std::string const& s) {
         long long hash_value = 0;
         int len = s.size();
         for (int i = 0; i < len; ++i) {
