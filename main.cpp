@@ -1,10 +1,8 @@
-#include<bits/stdc++.h>
-#include "libs/rolling_hash.h"
+#include "tests/hash_test.cpp"
 
 int main() {
-    RollingHash hash;
 
-    assert(hash.compute("knsxtrydiuulshizzpvpsblqbwaegwwk") == 3229309);
-    
+    hash_test();
+
     return 0;
 }
