@@ -7,6 +7,8 @@
 // Example 3: StaticHash hash(31, 'a');
 // Example 4: StaticHash hash(31, 'a', 1e9+9);
 
+#include <string>
+
 class StaticHash {
 private:
     long long p,m;

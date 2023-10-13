@@ -1,7 +1,8 @@
-#include<cassert>
-#include<string>
 #include "../libs/static_hash.h"
 #include "../libs/rolling_hash.h"
+#include<cassert>
+#include<string>
+#include<iostream>
 
 void hash_test() {
     std::string const test_str = "kwwgeawbqlbspvpzzihsluuidyrtxsnk";
@@ -27,4 +28,7 @@ void hash_test() {
         hash.pop_front();
     }
     assert(hash.value() == 0);
+    
+	std::cout << "TEST[Rolling Hash]: OK" << std::endl;
+	std::cout << "TEST[Static Hash]: OK" << std::endl;
 }

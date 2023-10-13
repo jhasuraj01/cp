@@ -1,4 +1,3 @@
-#include <queue>
 // Ref: https://cp-algorithms.com/string/string-hashing.html
 // Ref: https://youtu.be/FQ8hcOOzQMU?si=DoImhT7wQD-MgFsM
 // Time Complexity: O(N)
@@ -7,6 +6,10 @@
 // Example 2: RollingHash hash(31);
 // Example 3: RollingHash hash(31, 'a');
 // Example 4: RollingHash hash(31, 'a', 1e9+9);
+
+#include <queue>
+#include <string>
+#include <cassert>
 
 class RollingHash {
 private:
