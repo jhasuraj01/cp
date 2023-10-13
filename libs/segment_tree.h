@@ -1,6 +1,21 @@
 #include<functional>
 #include<vector>
 
+/**
+ * ## Segment Tree
+ * 
+ * ### Initialization:
+ * ```cpp
+ *  SegmentTree<int> segment_tree(arr, 0, [&](int a, int b) {
+ *  	return a+b;
+ *  });
+ * ```
+ * ### Operations:
+ * ```cpp
+ *  segment_tree.update(i, value);
+ *  segment_tree.get(i, j)
+ * ```
+*/
 template <typename T>
 class SegmentTree
 {
@@ -11,6 +26,8 @@ private:
     std::vector<T> tree;
     std::function<T(T, T)> calc;
 
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
     void build(std::vector<T> const &arr)
     {
         tree = std::vector<T>(tree_size, default_value);
@@ -28,6 +45,8 @@ private:
         }
     }
 
+    // Time Complexity: O(log N)
+    // Space Complexity: O(1)
     void compute_tree_length(int n)
     {
         tree_size = 1;
@@ -36,11 +55,15 @@ private:
         tree_size <<= 1;
     }
 
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
     int index(int i)
     {
         return (tree_size >> 1) + i;
     }
 
+    // Time Complexity: O(log N)
+    // Space Complexity: O(log N)
     T range_query(int start_index, int end_index, int parent_node, int left_bound, int right_bound)
     {
 
@@ -66,6 +89,8 @@ private:
     }
 
 public:
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
     SegmentTree(std::vector<T> const &arr, T _default_value, std::function<T(T, T)> const &_calc)
     {
         this->default_value = _default_value;
@@ -76,6 +101,8 @@ public:
         build(arr);
     }
 
+    // Time Complexity: O(log N)
+    // Space Complexity: O(1)
     void update(int _idx, T const &value)
     {
         int idx = index(_idx);
@@ -92,6 +119,8 @@ public:
         }
     }
 
+    // Time Complexity: O(log N)
+    // Space Complexity: O(log N)
     T get(int start_index, int end_index)
     {
         return range_query(start_index, end_index, 1, 0, array_size - 1);

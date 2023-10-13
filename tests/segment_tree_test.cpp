@@ -5,6 +5,7 @@
 #include<numeric>
 
 void segment_tree_test() {
+
     std::vector<int> arr = { -1, 2, -3, 4, -5, 6, -7 };
 
 	SegmentTree<int> segment_tree(arr, 0, [&](int a, int b) {

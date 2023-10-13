@@ -1,14 +1,17 @@
-// Ref: https://cp-algorithms.com/string/string-hashing.html
-// Ref: https://youtu.be/FQ8hcOOzQMU?si=DoImhT7wQD-MgFsM
-// Time Complexity: O(N)
-// Space Complexity: O(1)
-// Example 1: StaticHash hash;
-// Example 2: StaticHash hash(31);
-// Example 3: StaticHash hash(31, 'a');
-// Example 4: StaticHash hash(31, 'a', 1e9+9);
-
 #include <string>
 
+/**
+ * ## Rolling Hash
+ * 
+ * Examples:
+ * 1. `StaticHash hash;`
+ * 2. `StaticHash hash(31);`
+ * 3. `StaticHash hash(31, 'a');`
+ * 4. `StaticHash hash(31, 'a', 1e9+9);`
+ * 
+ * @ref https://cp-algorithms.com/string/string-hashing.html
+ * @ref https://youtu.be/FQ8hcOOzQMU?si=DoImhT7wQD-MgFsM
+ */
 class StaticHash {
 private:
     long long p,m;
@@ -21,6 +24,8 @@ public:
         this->start_ascii = start_ascii;
     }
 
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
     long long compute(std::string const& s) {
         long long computed_hash = 0;
         int len = s.size();
