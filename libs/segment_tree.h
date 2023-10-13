@@ -24,7 +24,7 @@ private:
     int array_size;
     T default_value;
     std::vector<T> tree;
-    std::function<T(T, T)> calc;
+    std::function<T(T, T)> merge;
 
     // Time Complexity: O(N)
     // Space Complexity: O(N)
@@ -41,7 +41,7 @@ private:
             int parent = i / 2;
             int left = i;
             int right = i + 1;
-            tree[parent] = calc(tree[left], tree[right]);
+            tree[parent] = merge(tree[left], tree[right]);
         }
     }
 
@@ -78,12 +78,12 @@ private:
         T right_result = default_value;
 
         if (start_index <= mid)
-            left_result = calc(default_value, range_query(start_index, std::min(mid, end_index), left_node, left_bound, mid));
+            left_result = merge(default_value, range_query(start_index, std::min(mid, end_index), left_node, left_bound, mid));
 
         if (end_index > mid)
-            right_result = calc(range_query(std::max(mid + 1, start_index), end_index, right_node, mid + 1, right_bound), default_value);
+            right_result = merge(range_query(std::max(mid + 1, start_index), end_index, right_node, mid + 1, right_bound), default_value);
 
-        T result = calc(left_result, right_result);
+        T result = merge(left_result, right_result);
 
         return result;
     }
@@ -94,7 +94,7 @@ public:
     SegmentTree(std::vector<T> const &arr, T _default_value, std::function<T(T, T)> const &_calc)
     {
         this->default_value = _default_value;
-        this->calc = _calc;
+        this->merge = _calc;
         array_size = (int)arr.size();
 
         compute_tree_length(array_size);
@@ -114,7 +114,7 @@ public:
         {
             int left = parent * 2;
             int right = left + 1;
-            tree[parent] = calc(tree[left], tree[right]);
+            tree[parent] = merge(tree[left], tree[right]);
             parent = parent / 2;
         }
     }
