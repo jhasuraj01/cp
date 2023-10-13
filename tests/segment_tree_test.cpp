@@ -6,7 +6,7 @@
 
 void segment_tree_test() {
 
-    std::vector<int> arr = { -1, 2, -3, 4, -5, 6, -7 };
+    std::vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 	SegmentTree<int> segment_tree(arr, 0, [&](int a, int b) {
 		return a+b;

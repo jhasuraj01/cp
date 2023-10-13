@@ -123,6 +123,6 @@ public:
     // Space Complexity: O(log N)
     T get(int start_index, int end_index)
     {
-        return range_query(start_index, end_index, 1, 0, array_size - 1);
+        return range_query(start_index, end_index, 1, 0, (tree_size >> 1) - 1);
     }
 };
