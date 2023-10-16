@@ -2,6 +2,20 @@
 #include <numeric>
 #include <cassert>
 
+/**
+ * ## Disjoint Set: Union by Rank
+ * 
+ * ### Initialization:
+ * ```cpp
+ *  DisjointSet dsu(size);
+ * ```
+ * ### Operations:
+ * ```cpp
+ *  dsu.find_set(int i);
+ *  dsu.merge_set(int i, int j)
+ *  dsu.is_same_set(int i, int j)
+ * ```
+*/
 class DisjointSet {
 private:
     int size;
@@ -42,6 +56,9 @@ public:
         return ans;
     }
 
+    // Avg. Time Complexity: O(1)
+    // Time Complexity: O(log N)
+    // Space Complexity: O(1)
     bool is_same_set(int a, int b) {
         a = find_set(a);
         b = find_set(b);
@@ -49,7 +66,7 @@ public:
         return a == b;
     }
 
-    // Amortized Time Complexity: O(1)
+    // Avg. Time Complexity: O(1)
     // Time Complexity: O(log N)
     // Space Complexity: O(1)
     int merge_set(int a, int b) {
