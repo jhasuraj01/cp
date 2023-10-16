@@ -15,12 +15,6 @@ using namespace std;
 #define allr(name) name.rbegin(), name.rend()
 #define pb push_back
 
-#ifdef ONLINE_JUDGE
-#define deb(...) 1
-#else
-#define deb(...) logger(#__VA_ARGS__, __VA_ARGS__)
-#endif
-
 template <typename T>
 ostream& operator<<(ostream& os, pair <T, T> &p) {
     os << "{" << p.first << ", " << p.second << "}";
@@ -31,6 +25,13 @@ ostream& operator<<(ostream& os, vector<T>& v) {
     for (auto e : v) os << e << " ";
     return os;
 }
+
+#ifdef ONLINE_JUDGE
+#define deb(...) 1
+#else
+#define deb(...) logger(#__VA_ARGS__, __VA_ARGS__)
+#endif
+
 template<typename ...Args>
 void logger(string vars, Args&&... values) {
     cout << vars << " = ";
