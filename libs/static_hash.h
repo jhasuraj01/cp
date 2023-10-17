@@ -1,7 +1,7 @@
 #include <string>
 
 /**
- * ## Rolling Hash
+ * ## Static Hash
  * 
  * Examples:
  * 1. `StaticHash hash;`
