@@ -1,5 +1,5 @@
-#include "../libs/static_hash.h"
-#include "../libs/rolling_hash.h"
+#include "../data_structures/static_hash.h"
+#include "../data_structures/rolling_hash.h"
 #include<cassert>
 #include<string>
 #include<iostream>
