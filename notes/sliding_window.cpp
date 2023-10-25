@@ -5,6 +5,9 @@ using std::vector;
  * ## Sliding Window
  *
  * @ref https://leetcode.com/problems/frequency-of-the-most-frequent-element/solutions/1175088/C++-Maximum-Sliding-Window-Cheatsheet-Template/
+ * 
+ * ### Atmost Method
+ * @ref https://leetcode.com/problems/binary-subarrays-with-sum/solutions/2866679/easy-and-detailed-sliding-window-approach-at-most-method-detailed-explanation-c-o-n/
  */
 
 int sliding_window(vector<int> &nums) {
