@@ -22,6 +22,9 @@
  *  st.size();
  *  st.top();
  * ```
+ * 
+ * ### References
+ * @ref https://cp-algorithms.com/data_structures/stack_queue_modification.html#stack-modification
  */
 template <typename T>
 class CustomStack {

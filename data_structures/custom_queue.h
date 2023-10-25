@@ -24,6 +24,9 @@
  * qu.pop()
  * qu.size()
  * ```
+ * 
+ * ### References
+ * @ref https://cp-algorithms.com/data_structures/stack_queue_modification.html#queue-modification-method-3
  */
 template <typename T>
 class CustomQueue {
