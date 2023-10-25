@@ -23,7 +23,7 @@ class QueueUsingStack {
         s2.pop();
     }
 
-    int top() {
+    T top() {
         preprocess();
         return s2.top();
     }
