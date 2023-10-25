@@ -1,4 +1,3 @@
-
 template <typename T>
 class QueueUsingStack {
    private:
