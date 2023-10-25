@@ -1,7 +1,28 @@
+#pragma once
 #include <functional>
 #include <stack>
 #include <vector>
 
+/**
+ * ## Custom Stack
+ * Can be used to build min/max/sum/xor Stack using any appropriate associative function
+ *
+ * ### Initialization:
+ * ```cpp
+ *  CustomStack<int> st(0, [&](int a, int b) {
+ *      return std::max(a, b);
+ *  });
+ * ```
+ * ### Operations:
+ * ```cpp
+ *  st.custom_value();
+ *  st.empty();
+ *  st.push(value);
+ *  st.pop();
+ *  st.size();
+ *  st.top();
+ * ```
+ */
 template <typename T>
 class CustomStack {
    private:

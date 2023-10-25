@@ -2,7 +2,7 @@
 
 #include <cassert>
 #include <iostream>
-#include <queue>
+#include <stack>
 
 void custom_stack_test() {
     // this will work as min stack
