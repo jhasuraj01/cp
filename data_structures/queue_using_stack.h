@@ -1,7 +1,9 @@
+#include <stack>
+
 template <typename T>
 class QueueUsingStack {
    private:
-    stack<T> s1, s2;
+    std::stack<T> s1, s2;
     void preprocess() {
         if (!s2.empty()) return;
         while (!s1.empty()) {
@@ -23,7 +25,7 @@ class QueueUsingStack {
         s2.pop();
     }
 
-    T top() {
+    T front() {
         preprocess();
         return s2.top();
     }
