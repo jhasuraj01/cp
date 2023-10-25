@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
 #define ll long long int
@@ -8,15 +8,17 @@ using namespace std;
 #define vvl vector<vl>
 #define pii pair<int, int>
 #define pll pair<ll, ll>
-#define inp(var, type) type var; cin >> var
-#define rep(i,a,b) for (int i = a; i < b; ++i)
-#define repe(i,a,b) for (int i = a; i <= b; ++i)
+#define inp(var, type) \
+    type var;          \
+    cin >> var
+#define rep(i, a, b) for (int i = a; i < b; ++i)
+#define repe(i, a, b) for (int i = a; i <= b; ++i)
 #define all(name) name.begin(), name.end()
 #define allr(name) name.rbegin(), name.rend()
 #define pb push_back
 
 template <typename T>
-ostream& operator<<(ostream& os, pair <T, T> &p) {
+ostream& operator<<(ostream& os, pair<T, T>& p) {
     os << "{" << p.first << ", " << p.second << "}";
     return os;
 }
@@ -32,7 +34,7 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 #define deb(...) logger(#__VA_ARGS__, __VA_ARGS__)
 #endif
 
-template<typename ...Args>
+template <typename... Args>
 void logger(string vars, Args&&... values) {
     cout << vars << " = ";
     string delim = "";
@@ -41,7 +43,7 @@ void logger(string vars, Args&&... values) {
 }
 
 // Example: https://www.codechef.com/viewsolution/54414764
-long long const mod = 1e9+7;
+long long const mod = 1e9 + 7;
 long long inverse_modulo(long long p, long long q) {
     long long expo = mod - 2;
     while (expo) {
@@ -80,10 +82,10 @@ long long binpow(long long a, long long b, long long m) {
 void solution();
 
 signed main() {
-	cin.tie(0)->sync_with_stdio(0);
+    cin.tie(0)->sync_with_stdio(0);
     cout.tie(0);
     cin.exceptions(cin.failbit);
-	// cout << setprecision(17) << fixed;
+    // cout << setprecision(17) << fixed;
     // cout << flush;
 
     int T = 1;

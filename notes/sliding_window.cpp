@@ -1,4 +1,4 @@
-#include<vector>
+#include <vector>
 using std::vector;
 
 /**
@@ -8,29 +8,28 @@ using std::vector;
  */
 
 int sliding_window(vector<int> &nums) {
-  int n = nums.size();
-  int start = 0;
-  int end = 0;
+    int n = nums.size();
+    int start = 0;
+    int end = 0;
 
-  int curr_value;
-  int final_value;
+    int curr_value;
+    int final_value;
 
-  while (end < n) {
+    while (end < n) {
+        // add element at `end` to curr_value
 
-    // add element at `end` to curr_value
+        while (start < end /* && condition for exclusion */) {
+            int curr_len = end - start;
 
-    while (start < end  /* && condition for exclusion */) {
-      int curr_len = end - start;
+            // remove element at `start` from curr_value
 
-      // remove element at `start` from curr_value
+            start++;
+        }
 
-      start++;
+        // update `final_value` using `curr_value`
+
+        end++;  // position of this line may vary from problem to problem
     }
 
-    // update `final_value` using `curr_value`
-
-    end++; // position of this line may vary from problem to problem
-  }
-
-  return final_value;
+    return final_value;
 }
